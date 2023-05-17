@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.wrap {
+  padding-top: 1000px;
+  padding-bottom: 200px;
+}
+
+/*スクロール前の設定（文字をかくしておく*/
+.typewriter {
+  overflow: hidden;
+  width: 0;
+}
+
+/*スクロールされたときに追加する設定*/
+.type {
+  border-right: 0.08em solid black;
+  white-space: nowrap;
+  animation: typing 2.5s steps(11, end) forwards, cursol 1s step-end infinite;
+}
+
+@keyframes typing{
+  0% { width: 0%; }
+  100% { width: 11em; }
+}
+
+@keyframes cursol{
+  0%{ border-color: transparent; }
+  50%{ border-color: black; }
+  100%{ border-color: transparent; }
+}
